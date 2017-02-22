@@ -1,1 +1,39 @@
 MapReduce
+
+
+import sys
+
+
+#Mapper
+
+# Read File as Table 
+Test = open("/Users/dylienneevery/Documents/VU M Information Sciences/Big Data - UVA/Pratical- assignments 25%/Repository/part-00000-1", "r")
+
+def Mapper():
+
+    for line in Test:
+        line = line.split('\t')
+        Dateselect = []
+        if line[0] >='2001-11-04T23:59' and line[0] <= "2001-11-08T23:59":
+            if line[1][-10::1] == "@enron.com" :          
+    
+                    if line[2][-11::1] != "@enron.com\n" :
+                        print line
+    
+    
+        
+            Dateselect.append(line)
+            print(Dateselect)
+            
+# external email filter/Reducer
+
+def LineCount():
+    line = line.split()
+        for line in reducedata:
+            counter = 0
+            reducedata = Mapper.Dateselect
+                counter +=1
+        print(counter)      
+    
+Mapper()
+LineCount()
